@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  height: 10vh;
+  background-color:#eee;
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 1rem;
+  text-align: center;
+  font-size: 5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+}
+
+.square {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 7rem;
+  font-weight:bold;
+  color: #0000008e;
+  cursor: pointer;
+}
+
+.x-square, .o-square {
+  cursor: not-allowed;
+}
+
+.x-square {
+  background-color: rgb(255, 0, 0);
+  color: #ffffffc4;
+}
+
+.o-square {
+  background-color: #1e00ff;
+  color: #ffffffc4;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  height: 43rem;
+
+  
+}
+
+.game-info {
+  margin-top: 6rem;
+  margin-left: 2em;
+  font-size: 2rem;
+}
+
+.status {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: green;
+  width: 23.6rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+li {
+  list-style:none;
+  font-size: 3rem;
+}
+
+button.jump {
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  font-family: Impact;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 6px 7px 8px red;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 40rem;
+}
+
+.game-board {
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1600px) {
+  
+  .board-row {
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0.5rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .square {
+    font-size: 4rem;
+  }
+
+  .game{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
+    }
+
+    .game-info {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+  .title {
+    font-size: 3rem;
+  }
+  
+  .status {
+    font-size: 2rem;
+    width: 23rem;
+  }
+
+  .game-info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .game{
+    display: flex;
+    flex-direction: column;
+    margin-top: 18rem;
+    }
+
+    button.jump {
+      font-family: Impact;
+      color: rgb(255, 255, 255);
+      background-color: #000000;
+      box-shadow: 6px 7px 8px red;
+      font-size: 1.6rem;
+      padding: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 40rem;
+      margin-bottom: 10px;
+      
+    }
+}
+
